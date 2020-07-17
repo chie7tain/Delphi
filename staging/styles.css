@@ -18,19 +18,27 @@
 }
 /* end  variable styles*/
 body{
-  background:var(--mainDarkBlue);
+  /* background:var(--mainBlue); */
   font-family: 'Open Sans', sans-serif;
 }
 /* styles for main container */
 .container{
-  width:1440px;
+  width:1555px;
   max-width: calc(100% - 5px);
-  margin:0 auto;
-  height: 100vh;
+  /* margin:0 auto; */
   padding:0 10px;
 }
 /* end of styles for main container */
 /* =================== */
+/* styles for first container */
+.first-container{
+  width:100%;
+  background:var(--mainDarkBlue);
+  height:120vh;
+  padding:1rem;
+}
+/* end of styles for first container */
+/* =========================== */
 
 /* styles for logo container and logo */
 #logo{
@@ -49,7 +57,8 @@ body{
   align-items: center;
   justify-content: center;
   /* border:1px solid; */
-  margin: 30px 0;
+  margin-top:20px;
+  margin-bottom:70px;
     /* transform: rotateX(45deg); */
 }
 .oracle{
@@ -144,7 +153,10 @@ body{
 /* styles for main section */
 .main-section{
   display: flex;
-  align-items: center;
+  height:70vh;
+  /* background:var(--mainBlue); */
+  margin-bottom: 50px;
+  /* align-items: center; */
 }
 .hero-container{
   display: flex;
@@ -176,11 +188,12 @@ body{
 /* styles for notify form */
   .form-heading{
     color:var(--mainWhite);
+      margin:auto 20px;
   }
   .input-container{
     width:50%;
     position:relative;
-    height:50px;
+    height:70px;
     overflow:hidden;
     margin:20px 0;
   }
@@ -303,3 +316,53 @@ body{
 }
 /* end of sports icon container */
 /* ================= */
+
+/* second container */
+.second-container{
+  display:flex;
+  height:100vh;
+  width:100%;
+  margin-top:5rem;
+
+}
+.champion-container{
+  width:50%;
+  height:100vh;
+  color:var(--mainDarkBlue);
+  background-color: var(--mainBlue);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.second-notify-container{
+  /* height:70vh; */
+  /* background-color: var(--mainBlue); */
+}
+.second-notify-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width:90%;
+  margin:auto;
+}
+.champion-heading{
+  margin:10px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.champion-text{
+  margin:30px;
+}
+.carousel-container{
+  width:50%;
+  height:100vh;
+  padding:1rem;
+  background-color: var(--mainBlue);
+}
+.carousel-img{
+  width:100%;
+  height:90vh;
+}
+/* end of second container */

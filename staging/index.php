@@ -1,33 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie-edge">
-    <title>Delphi</title>
-    <!-- styles  -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- responsive sttyles -->
-    <link rel="stylesheet" href="./styles/desktop.css">
-    <link rel="stylesheet" href="./styles/tablet.css">
-    <link rel="stylesheet" href="./styles/mobile.css">
-    <!-- end of styles -->
-    <!-- fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Open+Sans:wght@600&display=swap"
-      rel="stylesheet">
-    <!-- end of fonts -->
-    <!-- icons from font awesome -->
-    <!-- <script src="https://kit.fontawesome.com/52f2afaff9.js" crossorigin="anonymous"></script> -->
-    <!-- end of icons from font awesome -->
+<!-- using the require function to insert head and meta  -->
+  <?php
+      // include ("server.php");
+?>
+<?php include "../templates/header.php";?>
+     <title>Delphi</title>
   </head>
   <body>
     <!-- main container -->
     <section class="container">
       <!-- header section -->
       <header>
-        <!-- <div class="logo-container">
-          <img id="logo" src="../assets/icons/test-logo.svg" alt="logo icon">
-        </div> -->
         <div class="oracle-container">
           <div class="oracle-band1 oracle">
             <img class="oracle-icon" src="../assets/icons/baseball.svg" alt="">
@@ -43,7 +25,6 @@
           </div>
                   <div class="logo-container">
                     <h3><a id="logo" href="index.html">Del<span>Phi</span></a> </h3>
-                    <!-- <img id="logo" src="../assets/icons/test-logo.svg" alt="logo icon"> -->
                   </div>
           <div class="oracle-band5 oracle">
             <img class="oracle-icon" src="../assets/icons/american football.svg" alt="">
@@ -76,20 +57,38 @@
           </div>
           <!-- ======================= -->
           <!-- notifiy form container -->
-          <div class="notify-form-container">
-            <h2 class="form-heading">Get Notified on app release!</h2>
-            <form action="" class="notify-form">
+
+        <div class="notify-form-container">
+        <h2 class="form-heading">Get Notified on app release!</h2>
+        <!-- form begining -->
+            <form  method="POST" class="notify-form" action="notifyform.php">
+            <!-- username -->
               <div class="input-container">
-                <input type="text" id="email" name="email" autocomplete="off" required>
+                <input type="text" id="firstname" name="name" autocomplete="off" required value="">
+                <label for="firstname" class="email-label">
+                  <span class="content-name">Enter your name</span>
+                </label>
+                <span class="error">* <?php ;?></span>
+              </div>
+              <!-- end of username -->
+              <!-- =================== -->
+              <!-- email -->
+              <div class="input-container">
+                <input type="email" id="email" name="email" autocomplete="off" required value="">
                 <label for="email" class="email-label">
                   <span class="content-name">Enter your email address</span>
                 </label>
+                <span class="error">* <?php;?></span>
               </div>
+              <!-- end of email -->
+              <!-- ==================== -->
+
               <div class="btn-container">
                 <input type="submit" value="Submit" id="submit-btn">
               </div>
             </form>
-          </div>
+        </div>
+          <!-- end of notify container -->
         </div>
         <!-- ======================== -->
         <!-- background image of sports people -->
@@ -122,10 +121,7 @@
 
     </section>
 
+
     <!-- end of main container -->
     <!-- ===================== -->
-    <!-- javascript -->
-    <script src="app.js"></script>
-    <!-- end of javascript -->
-  </body>
-</html>
+   <?php require "../templates/footer.php";
