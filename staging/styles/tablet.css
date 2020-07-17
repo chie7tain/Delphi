@@ -306,25 +306,35 @@ header{
 
 /* second container */
 .second-container{
-  display:flex;
+  display:grid;
   width:100%;
+  grid-template-areas:
+   "right left"
+  "right  left"
+  "footer footer";
   margin-top:5rem;
   background: var(--mainBlue);
 }
 .champion-container{
-  width:50%;
+  width:100%;
   color:var(--mainDarkBlue);
   background-color: var(--mainBlue);
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  grid-area: right;
+}
+.second-notify-container{
+  width: 100%;
+  grid-area:footer;
 }
 .second-notify-form{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width:90%;
+  width:100%;
   margin:auto;
+
 }
 .second-notify-form .input-container input{
   color:var(--mainBlack);
@@ -339,11 +349,12 @@ header{
   margin:30px;
 }
 .carousel-container{
-  width:50%;
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding:1rem;
+  grid-area: left;
 }
 .carousel-img{
   width:100%;

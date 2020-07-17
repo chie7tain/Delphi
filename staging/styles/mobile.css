@@ -295,19 +295,28 @@ header{
 
 /* second container */
 .second-container{
-  display:flex;
+  display:grid;
   width:100%;
+  grid-template-areas:
+   "right left"
+  "right  left"
+  "footer footer";
   margin-top:5rem;
   background: var(--mainBlue);
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 .champion-container{
-  width:50%;
+  width:100%;
   color:var(--mainDarkBlue);
   background-color: var(--mainBlue);
   flex-direction: column;
   justify-content: space-around;
+    grid-area: right;
   /* align-items: center; */
+}
+.second-notify-container{
+  width: 100%;
+  grid-area:footer;
 }
 .second-notify-form{
   display:flex;
@@ -331,12 +340,10 @@ header{
   font-size:.75rem;
 }
 .carousel-container{
-  width:50%;
+  width:100%;
   display: flex;
   align-items: center;
-  border:1px solid;
-  /* flex-direction: column; */
-  /* justify-content: center; */
+  grid-area:left;
   padding:1rem;
 }
 .carousel-img{
@@ -346,34 +353,41 @@ header{
 /* end of second container */
 }
 @media only screen and (max-width:400px){
-  /* styles for first container */
+   /* styles for first container */
 .first-container{
   width:100%;
   background:var(--mainDarkBlue);
-  height:130vh;
+  /* height:130vh; */
   padding:1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 /* end of styles for first container */
 /* =========================== */
 
 /* styles for logo container and logo */
+header{
+  display: flex;
+  margin:20px;
+}
+.oracle-container{
+  width:100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+  margin-bottom:50px;
+  /* border:1px solid; */
+}
 #logo{
   letter-spacing: var(--mainSpacing);
   text-transform: uppercase;
   color:var(--mainWhite);
   cursor: pointer;
   text-decoration: none;
-}
-.oracle-container{
-  width:150px;
-  height:100px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top:30px;
-  margin-bottom:80px;
-
+  font-size:1.1rem;
 }
 .oracle{
   transform: rotateX(45deg);
@@ -383,17 +397,12 @@ header{
 }
 .oracle-band1,.oracle-band2,.oracle-band3,.oracle-band4,.oracle-band5,.oracle-band6,.oracle-band7{
   border:0.5px solid var(--mainWhite);
-  /* width:100px;
-  height: 100px; */
-  /* border-radius: 50%; */
-  transform: rotateY(45deg);
-  transform:rotateX(45deg);
-  position: relative;
+  /* position: relative; */
   position: absolute;
   pointer-events: none;
 }
 .oracle-icon{
-  transform: rotateY(45deg);
+  /* transform: rotateY(45deg); */
   position: relative;
   top:0px;
   width:20px;
@@ -403,7 +412,7 @@ header{
   animation-iteration-count: infinite;
 }
 .oracle-band1{
-    transform: rotateY(45deg);
+  transform: rotateY(45deg);
   width:100px;
   height: 100px;
   animation-duration: 7s;
@@ -467,44 +476,47 @@ header{
 /* styles for main section */
 .main-section{
   display: flex;
-  height:70vh;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  align-items: center;
+  flex-direction:column;
 }
 .hero-container{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 70vh;
   margin:20px;
-  /* border: 1px solid; */
+
 }
 .hero-heading{
   color:var(--mainWhite);
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   font-family: 'Fira Mono', monospace;
-
+  font-size:1rem;
 }
 .hero-banner{
   color:var(--mainWhite);
   text-transform: uppercase;
   margin-bottom:20px;
   font-family: 'Fira Mono', monospace;
+  font-size:1.8rem;
 }
 .hero-banner span{
   color:var(--mainRed);
 }
 .hero-text{
   color:var(--mainWhite);
-  line-height: 1.5rem;
+  line-height: 1.2rem;
+  font-size:.8rem;
 }
 /* styles for notify form */
   .form-heading{
     color:var(--mainWhite);
-      margin:auto 20px;
+    margin:auto 20px;
+    font-size:1.3rem;
   }
   .input-container{
-    width:50%;
+    width:100%;
     position:relative;
     height:70px;
     overflow:hidden;
@@ -514,7 +526,7 @@ header{
     width:100%;
     height:100%;
     color:orange;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: var(--mainSpacing);
     padding-top:20px;
     border:none;
@@ -560,10 +572,10 @@ header{
     border:none;
   }
   #submit-btn{
-    padding:1rem;
+    padding:.7rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
-    width:50%;
+    width:90%;
     margin:20px 0;
     border:none;
     cursor: pointer;
@@ -573,9 +585,7 @@ header{
     transition:var(--mainTransition);
   }
   #submit-btn:hover{
-    /* color:var(--mainRed); */
     background:var(--mainBlack);
-    /* border:1px solid var(--mainRed); */
   }
 /* end of styles for notify form */
 /* =============== */
@@ -587,13 +597,20 @@ header{
 /* ================== */
 .bicycle-line-container{
   display: flex;
-  flex-direction: column;
-  height: 70vh;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  width:100%;
+  height: 50px;
   align-items:center;
 }
-.line{
-  height: 100%;
-  width:2px;
+.line1{
+  width:50%;
+  height: 2px;
+  background: var(--mainWhite);
+}
+.line2{
+  width:50%;
+  height: 2px;
   background: var(--mainWhite);
 }
 /* end of styles for main section*/
@@ -603,14 +620,14 @@ header{
 .sports-icon-container{
   background-color: rgb(221, 151, 21);
   border-radius: 10px;
-  width:70%;
-  height:80px;
+  width:100%;
+  height:50px;
   margin:auto;
   display: flex;
   justify-content: space-evenly;
 }
 .sport{
-  width:60px;
+  width:30px;
   transition: var(--mainTransition);
   cursor:pointer;
 }
@@ -631,51 +648,60 @@ header{
 
 /* second container */
 .second-container{
-  display:flex;
-  height:100vh;
+  display:grid;
   width:100%;
+  grid-template-areas:
+   "right left"
+  "right  left"
+  "footer footer";
   margin-top:5rem;
-
+  background: var(--mainBlue);
+  /* align-items: flex-start; */
 }
 .champion-container{
-  width:50%;
-  height:100vh;
+  width:100%;
   color:var(--mainDarkBlue);
   background-color: var(--mainBlue);
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+    grid-area: right;
+  /* align-items: center; */
 }
 .second-notify-container{
-  /* height:70vh; */
-  /* background-color: var(--mainBlue); */
+  width: 100%;
+  grid-area:footer;
 }
 .second-notify-form{
   display:flex;
   flex-direction: column;
   justify-content: center;
-
   width:90%;
   margin:auto;
+}
+.second-notify-form .input-container input{
+  color:var(--mainBlack);
 }
 .champion-heading{
   margin:10px 0;
   text-transform: uppercase;
   text-align: center;
+  font-size:1.3rem;
 }
 
 .champion-text{
   margin:30px;
+  font-size:.75rem;
 }
 .carousel-container{
-  width:50%;
-  height:100vh;
+  width:100%;
+  display: flex;
+  align-items: center;
+  grid-area:left;
   padding:1rem;
-  background-color: var(--mainBlue);
 }
 .carousel-img{
   width:100%;
-  height:90vh;
+  height:60vh;
 }
 /* end of second container */
 

@@ -282,34 +282,39 @@
 /* end of sports icon container */
 /* ================= */
 
-/* second container */
 .second-container{
-  display:flex;
-  height:100vh;
+  display:grid;
   width:100%;
+  grid-template-areas:
+   "right left"
+  "right  left"
+  "footer footer";
   margin-top:5rem;
-
+  background: var(--mainBlue);
 }
 .champion-container{
-  width:50%;
-  height:100vh;
+  width:100%;
   color:var(--mainDarkBlue);
   background-color: var(--mainBlue);
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  grid-area: right;
 }
 .second-notify-container{
-  /* height:70vh; */
-  /* background-color: var(--mainBlue); */
+  width: 100%;
+  grid-area:footer;
 }
 .second-notify-form{
   display:flex;
   flex-direction: column;
   justify-content: center;
-
-  width:90%;
+  width:100%;
   margin:auto;
+
+}
+.second-notify-form .input-container input{
+  color:var(--mainBlack);
 }
 .champion-heading{
   margin:10px 0;
@@ -321,10 +326,12 @@
   margin:30px;
 }
 .carousel-container{
-  width:50%;
-  height:100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding:1rem;
-  background-color: var(--mainBlue);
+  grid-area: left;
 }
 .carousel-img{
   width:100%;
