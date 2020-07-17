@@ -159,6 +159,7 @@ body{
   flex-direction: column;
   justify-content: space-around;
   height: 70vh;
+  margin:20px;
   /* border: 1px solid; */
 }
 .hero-heading{
@@ -287,7 +288,7 @@ body{
   background-color: rgb(221, 151, 21);
   border-radius: 10px;
   width:70%;
-  height:90px;
+  height:80px;
   margin:auto;
   display: flex;
   justify-content: space-evenly;
