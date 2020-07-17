@@ -1,0 +1,682 @@
+/* large mobile styles */
+@media only screen and (max-width:425px){
+  /* styles for first container */
+.first-container{
+  width:100%;
+  background:var(--mainDarkBlue);
+  /* height:130vh; */
+  padding:1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* end of styles for first container */
+/* =========================== */
+
+/* styles for logo container and logo */
+header{
+  display: flex;
+  margin:20px;
+}
+.oracle-container{
+  width:100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+  margin-bottom:50px;
+  /* border:1px solid; */
+}
+#logo{
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+  color:var(--mainWhite);
+  cursor: pointer;
+  text-decoration: none;
+  font-size:1.1rem;
+}
+.oracle{
+  transform: rotateX(45deg);
+  animation-name: revolve;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.oracle-band1,.oracle-band2,.oracle-band3,.oracle-band4,.oracle-band5,.oracle-band6,.oracle-band7{
+  border:0.5px solid var(--mainWhite);
+  /* position: relative; */
+  position: absolute;
+  pointer-events: none;
+}
+.oracle-icon{
+  /* transform: rotateY(45deg); */
+  position: relative;
+  top:0px;
+  width:20px;
+  animation-name: revolve;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.oracle-band1{
+  transform: rotateY(45deg);
+  width:100px;
+  height: 100px;
+  animation-duration: 7s;
+}
+.oracle-band2{
+  width:110px;
+  height: 110px;
+    width:100px;
+  height: 100px;
+  animation-duration: 8s;
+}
+.oracle-band3{
+  width:120px;
+  height: 120px;
+    width:100px;
+  height: 100px;
+  animation-duration: 9s;
+}
+.oracle-band4{
+  width:130px;
+  height: 130px;
+    width:100px;
+  height: 100px;
+  animation-duration: 10s;
+}
+.oracle-band5{
+  width:140px;
+  height: 140px;
+    width:100px;
+  height: 100px;
+  animation-duration: 11s;
+}
+.oracle-band6{
+  width:150px;
+  height: 150px;
+    width:100px;
+  height: 100px;
+  animation-duration: 12s;
+}
+.oracle-band7{
+  width:160px;
+  height: 160px;
+    width:100px;
+  height: 100px;
+  animation-duration:13s;
+}
+@keyframes revolve{
+  0%{
+    transform:rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/* end of styles for logo container and logo */
+/* =========================== */
+/* styles for main section */
+.main-section{
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  flex-direction:column;
+}
+.hero-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin:20px;
+
+}
+.hero-heading{
+  color:var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-family: 'Fira Mono', monospace;
+  font-size:1rem;
+}
+.hero-banner{
+  color:var(--mainWhite);
+  text-transform: uppercase;
+  margin-bottom:20px;
+  font-family: 'Fira Mono', monospace;
+  font-size:1.8rem;
+}
+.hero-banner span{
+  color:var(--mainRed);
+}
+.hero-text{
+  color:var(--mainWhite);
+  line-height: 1.2rem;
+  font-size:.8rem;
+}
+/* styles for notify form */
+  .form-heading{
+    color:var(--mainWhite);
+    margin:auto 20px;
+    font-size:1.3rem;
+  }
+  .input-container{
+    width:100%;
+    position:relative;
+    height:70px;
+    overflow:hidden;
+    margin:20px 0;
+  }
+  .input-container input{
+    width:100%;
+    height:100%;
+    color:orange;
+    font-size: 1rem;
+    letter-spacing: var(--mainSpacing);
+    padding-top:20px;
+    border:none;
+    outline:none;
+    background:none;
+  }
+  .input-container label{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom:1px solid;
+  }
+  .input-container label::after{
+    content:"";
+    position:absolute;
+    left:0px;
+    bottom:-2px;
+    height:100%;
+    width:100%;
+    border-bottom:5px solid var(--mainWhite);
+    transform:translateX(-100%);
+    transition:var(--mainTransition);
+  }
+  .content-name{
+    position: absolute;
+    bottom:5px;
+    left:0px;
+    transition:var(--mainTransition);
+  }
+  .input-container input:focus + .email-label .content-name,
+  .input-container input:valid + .email-label .content-name{
+    transform:translateY(-150%);
+    font-size:14px;
+    color:var(--mainWhite);
+  }
+  .input-container input:focus + .email-label::after, .input-container input:valid + .email-label::after{
+    transform:translateX(0%);
+  }
+  .input-container input:focus + label{
+    border:none;
+  }
+  #submit-btn{
+    padding:.7rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    width:90%;
+    margin:20px 0;
+    border:none;
+    cursor: pointer;
+    background-color: var(--mainRed);
+    color:var(--mainWhite);
+    border-radius: 7px;
+    transition:var(--mainTransition);
+  }
+  #submit-btn:hover{
+    background:var(--mainBlack);
+  }
+/* end of styles for notify form */
+/* =============== */
+/* styles for background image */
+#background-image{
+  width:100%;
+}
+/* end of styles for background image */
+/* ================== */
+.bicycle-line-container{
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  width:100%;
+  height: 50px;
+  align-items:center;
+}
+.line1{
+  width:50%;
+  height: 2px;
+  background: var(--mainWhite);
+}
+.line2{
+  width:50%;
+  height: 2px;
+  background: var(--mainWhite);
+}
+/* end of styles for main section*/
+/* =========================== */
+
+/* sports icon container */
+.sports-icon-container{
+  background-color: rgb(221, 151, 21);
+  border-radius: 10px;
+  width:100%;
+  height:50px;
+  margin:auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sport{
+  width:30px;
+  transition: var(--mainTransition);
+  cursor:pointer;
+}
+.sport:hover{
+  transform:translateY(-25%) rotate(45deg);
+}
+.cycle:hover{
+  transform:translateX(30%);
+}
+.weight:hover{
+  transform:translateY(25%);
+}
+.horse:hover{
+  transform: translateY(-15%) translateX(25%);
+}
+/* end of sports icon container */
+/* ================= */
+
+/* second container */
+.second-container{
+  display:flex;
+  width:100%;
+  margin-top:5rem;
+  background: var(--mainBlue);
+  align-items: flex-start;
+}
+.champion-container{
+  width:50%;
+  color:var(--mainDarkBlue);
+  background-color: var(--mainBlue);
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+.second-notify-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width:90%;
+  margin:auto;
+}
+.second-notify-form .input-container input{
+  color:var(--mainBlack);
+}
+.champion-heading{
+  margin:10px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size:1.3rem;
+}
+
+.champion-text{
+  margin:30px;
+  font-size:.75rem;
+}
+.carousel-container{
+  width:50%;
+  display: flex;
+  align-items: center;
+  border:1px solid;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  padding:1rem;
+}
+.carousel-img{
+  width:100%;
+  height:60vh;
+}
+/* end of second container */
+}
+@media only screen and (max-width:400px){
+  /* styles for first container */
+.first-container{
+  width:100%;
+  background:var(--mainDarkBlue);
+  height:130vh;
+  padding:1rem;
+}
+/* end of styles for first container */
+/* =========================== */
+
+/* styles for logo container and logo */
+#logo{
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+  color:var(--mainWhite);
+  cursor: pointer;
+  text-decoration: none;
+}
+.oracle-container{
+  width:150px;
+  height:100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+  margin-bottom:80px;
+
+}
+.oracle{
+  transform: rotateX(45deg);
+  animation-name: revolve;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.oracle-band1,.oracle-band2,.oracle-band3,.oracle-band4,.oracle-band5,.oracle-band6,.oracle-band7{
+  border:0.5px solid var(--mainWhite);
+  /* width:100px;
+  height: 100px; */
+  /* border-radius: 50%; */
+  transform: rotateY(45deg);
+  transform:rotateX(45deg);
+  position: relative;
+  position: absolute;
+  pointer-events: none;
+}
+.oracle-icon{
+  transform: rotateY(45deg);
+  position: relative;
+  top:0px;
+  width:20px;
+  animation-name: revolve;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.oracle-band1{
+    transform: rotateY(45deg);
+  width:100px;
+  height: 100px;
+  animation-duration: 7s;
+}
+.oracle-band2{
+  width:110px;
+  height: 110px;
+    width:100px;
+  height: 100px;
+  animation-duration: 8s;
+}
+.oracle-band3{
+  width:120px;
+  height: 120px;
+    width:100px;
+  height: 100px;
+  animation-duration: 9s;
+}
+.oracle-band4{
+  width:130px;
+  height: 130px;
+    width:100px;
+  height: 100px;
+  animation-duration: 10s;
+}
+.oracle-band5{
+  width:140px;
+  height: 140px;
+    width:100px;
+  height: 100px;
+  animation-duration: 11s;
+}
+.oracle-band6{
+  width:150px;
+  height: 150px;
+    width:100px;
+  height: 100px;
+  animation-duration: 12s;
+}
+.oracle-band7{
+  width:160px;
+  height: 160px;
+    width:100px;
+  height: 100px;
+  animation-duration:13s;
+}
+@keyframes revolve{
+  0%{
+    transform:rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/* end of styles for logo container and logo */
+/* =========================== */
+/* styles for main section */
+.main-section{
+  display: flex;
+  height:70vh;
+  margin-bottom: 70px;
+}
+.hero-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70vh;
+  margin:20px;
+  /* border: 1px solid; */
+}
+.hero-heading{
+  color:var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-family: 'Fira Mono', monospace;
+
+}
+.hero-banner{
+  color:var(--mainWhite);
+  text-transform: uppercase;
+  margin-bottom:20px;
+  font-family: 'Fira Mono', monospace;
+}
+.hero-banner span{
+  color:var(--mainRed);
+}
+.hero-text{
+  color:var(--mainWhite);
+  line-height: 1.5rem;
+}
+/* styles for notify form */
+  .form-heading{
+    color:var(--mainWhite);
+      margin:auto 20px;
+  }
+  .input-container{
+    width:50%;
+    position:relative;
+    height:70px;
+    overflow:hidden;
+    margin:20px 0;
+  }
+  .input-container input{
+    width:100%;
+    height:100%;
+    color:orange;
+    font-size: 1.1rem;
+    letter-spacing: var(--mainSpacing);
+    padding-top:20px;
+    border:none;
+    outline:none;
+    background:none;
+  }
+  .input-container label{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom:1px solid;
+  }
+  .input-container label::after{
+    content:"";
+    position:absolute;
+    left:0px;
+    bottom:-2px;
+    height:100%;
+    width:100%;
+    border-bottom:5px solid var(--mainWhite);
+    transform:translateX(-100%);
+    transition:var(--mainTransition);
+  }
+  .content-name{
+    position: absolute;
+    bottom:5px;
+    left:0px;
+    transition:var(--mainTransition);
+  }
+  .input-container input:focus + .email-label .content-name,
+  .input-container input:valid + .email-label .content-name{
+    transform:translateY(-150%);
+    font-size:14px;
+    color:var(--mainWhite);
+  }
+  .input-container input:focus + .email-label::after, .input-container input:valid + .email-label::after{
+    transform:translateX(0%);
+  }
+  .input-container input:focus + label{
+    border:none;
+  }
+  #submit-btn{
+    padding:1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    width:50%;
+    margin:20px 0;
+    border:none;
+    cursor: pointer;
+    background-color: var(--mainRed);
+    color:var(--mainWhite);
+    border-radius: 7px;
+    transition:var(--mainTransition);
+  }
+  #submit-btn:hover{
+    /* color:var(--mainRed); */
+    background:var(--mainBlack);
+    /* border:1px solid var(--mainRed); */
+  }
+/* end of styles for notify form */
+/* =============== */
+/* styles for background image */
+#background-image{
+  width:100%;
+}
+/* end of styles for background image */
+/* ================== */
+.bicycle-line-container{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  align-items:center;
+}
+.line{
+  height: 100%;
+  width:2px;
+  background: var(--mainWhite);
+}
+/* end of styles for main section*/
+/* =========================== */
+
+/* sports icon container */
+.sports-icon-container{
+  background-color: rgb(221, 151, 21);
+  border-radius: 10px;
+  width:70%;
+  height:80px;
+  margin:auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sport{
+  width:60px;
+  transition: var(--mainTransition);
+  cursor:pointer;
+}
+.sport:hover{
+  transform:translateY(-25%) rotate(45deg);
+}
+.cycle:hover{
+  transform:translateX(30%);
+}
+.weight:hover{
+  transform:translateY(25%);
+}
+.horse:hover{
+  transform: translateY(-15%) translateX(25%);
+}
+/* end of sports icon container */
+/* ================= */
+
+/* second container */
+.second-container{
+  display:flex;
+  height:100vh;
+  width:100%;
+  margin-top:5rem;
+
+}
+.champion-container{
+  width:50%;
+  height:100vh;
+  color:var(--mainDarkBlue);
+  background-color: var(--mainBlue);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.second-notify-container{
+  /* height:70vh; */
+  /* background-color: var(--mainBlue); */
+}
+.second-notify-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width:90%;
+  margin:auto;
+}
+.champion-heading{
+  margin:10px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.champion-text{
+  margin:30px;
+}
+.carousel-container{
+  width:50%;
+  height:100vh;
+  padding:1rem;
+  background-color: var(--mainBlue);
+}
+.carousel-img{
+  width:100%;
+  height:90vh;
+}
+/* end of second container */
+
+}
