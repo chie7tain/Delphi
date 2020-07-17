@@ -34,7 +34,7 @@ body{
 .first-container{
   width:100%;
   background:var(--mainDarkBlue);
-  height:120vh;
+  height:130vh;
   padding:1rem;
 }
 /* end of styles for first container */
@@ -49,17 +49,15 @@ body{
   text-decoration: none;
 }
 .oracle-container{
-  /* background:var(--mainDarkBlue); */
   width:150px;
   height:100px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border:1px solid; */
-  margin-top:20px;
-  margin-bottom:70px;
-    /* transform: rotateX(45deg); */
+  margin-top:30px;
+  margin-bottom:80px;
+
 }
 .oracle{
   transform: rotateX(45deg);
@@ -154,9 +152,7 @@ body{
 .main-section{
   display: flex;
   height:70vh;
-  /* background:var(--mainBlue); */
-  margin-bottom: 50px;
-  /* align-items: center; */
+  margin-bottom: 70px;
 }
 .hero-container{
   display: flex;
@@ -288,17 +284,16 @@ body{
 
 /* sports icon container */
 .sports-icon-container{
-  /* background:var(--mainBlue); */
   background-color: rgb(221, 151, 21);
   border-radius: 10px;
   width:70%;
-  height:100px;
+  height:90px;
   margin:auto;
   display: flex;
   justify-content: space-evenly;
 }
 .sport{
-  width:70px;
+  width:60px;
   transition: var(--mainTransition);
   cursor:pointer;
 }
